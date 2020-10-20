@@ -1,0 +1,104 @@
+
+
+@font-face {
+    font-family: 'quicksandMedium';
+    src: url('../fonts/static/Quicksand-Medium.ttf');
+}
+@font-face {
+    font-family: 'quicksandLight';
+    src: url('../fonts/static/Quicksand-Light.ttf');
+}
+@font-face {
+    font-family: 'quicksandRegular';
+    src: url('../fonts/static/Quicksand-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Staatliches';
+    src: url('../fonts/Staatliches/Staatliches-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'quicksandBold';
+    src: url('../fonts/static/Quicksand-Bold.ttf');
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0056acd5;
+}
+
+#divAFechar {
+    width: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: quicksandMedium;
+    color: rgb(24, 24, 24);
+}
+
+
+#insereDados {
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.fa-times-circle {
+    color: red;
+}
+
+#aAdiciona {
+    font-family: quicksandMedium;
+    color: #b17308;
+}
+
+
+
+#formAdiciona {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #f0f0f0;
+    border: 2px solid #AB6B00;
+    position: fixed;
+    border-radius: 5px;
+    padding:8px;
+}
+
+#inputPalavra {
+    padding: 15px;
+    border: 1px solid #AB6B00;
+    border-radius: 5px;
+    outline-color:#1988F7;
+    outline-width: 1px;
+    font-family:quicksandRegular;
+    font-weight: 700;
+    color: rgb(24, 24, 24);
+    
+}
+
+#inputDescricao {
+    border: 1px solid #AB6B00;
+    border-radius: 5px;
+   outline: none;
+   font-family:quicksandRegular;
+   font-weight: 700;
+   color: rgb(24, 24, 24);
+}
+
+#enviaPalavra {
+    Padding:8px;
+    margin-top: 3px;
+    font-family: quicksandMedium;
+    font-size: 15px;
+    border: 1px solid #AB6B00;
+    border-radius: 1px;
+    outline-color:#1988F7;
+    outline-width: 1px;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewWord</title>
+    <meta name="author" content="Lucas Pereira">
+    <link rel="stylesheet" href="./Assets/style/style.css">
+    <link rel="stylesheet" href="./Assets/fontvendor/css/all.css">
+</head>
+<body>
+    <header>
+        <section id="sectionMenuLogo">
+            <div class="navbar" >
+               <button id="bars"><i class="fas fa-bars"></i></button> 
+            </div>
+            <div>
+                <a class="titulo" href="./index.html "a><p>NewWord</p></a>
+            </div>
+        </section>
+        <nav class="sectionPessoal">
+            <a class="aHeader"><p class="subTitulo" id="pPerf">Meu perfil</p></a>
+            <a class="aHeader"id="aHeader"><p class="subTitulo" id="pReg">Meus Registros</p></a>
+            <a  class="aHeader"><p class="subTitulo">Referencia</p></a>
+        </nav>
+        <section id="sectionFerramentas">
+            <a href="" class="login"><p>Fazer login</p></a>
+            <div class="modoNoturno" >
+                <i class="fas fa-cloud-moon" id="cloudMoon"></i>
+                <p class="divSuspensaModoNoturnoStatus">ligar</p>
+            </div> 
+            <div class="logoff" >
+                <i class="fas fa-sign-in-alt"></i>
+                <div class="divlogoffInf">Sair</div>
+            </div>
+        </section>
+    </header>
+    <main id="paginaPrincipal">
+        <section class="abas">
+
+                <button id="todosDicionarios" class="aba"><a class="aAba">Dicionários</a></button>
+            <button id="encontrar" class="aba"><a class="aAba">Encontrar Palavra</a></button>
+        </section>
+        <div id="Inf">Meu Dicionário;</div>
+        <section id="dados">
+            <div id="divVazio">
+                <img id="imgAbaVazia" src="./Assets/imagens/abaVazia.svg" alt="AbaVazia">
+            <p id="infVazio">Vazio</p>
+            </div>
+ 
+            <button id="criar" class="aba"><a class="aAba">Criar novo Dicionário</a></button>
+
+            <div id="formAdiçaoDicionario">
+                <p class="infForm">Criar Novo Dicionário:</p>
+                <p id="novoNome" class="infForm">Nome</p>
+                <div id="divInput">
+                    <form action="" method="">
+                    <input type="text" required id="inputNome" >
+                    <button  id="ExecutaCriaçao" ><p id="pNome">Criar</p></button>
+                    </form>
+                </div>
+            </div>
+        
+            <section id="sectionDados">
+                <section id="sectionMeusDicionarios">
+                    <div id="meusDicionarios">
+                        <p id="pMDicionarios">Meus dicionarios:</p>
+                        <div id="divDicionariosLink">
+                       
+                            <div  class="divLinkDicionario" >
+                                <button  class="dicionarioIconGeral" id="dicionarioIcon1">
+                                    <i class="fas fa-spell-check"></i>
+                                    <p id="pNameDicionario1">Dicionario1</p>
+                                </button>
+                                <i class="fas fa-check-circle" id="statusSelecionado1"></i>
+                            </div>
+                           
+                            <div  class="divLinkDicionario" >
+                                <button class="dicionarioIconGeral"  id="dicionarioIcon2" >
+                                    <i class="fas fa-spell-check"></i>
+                                    <p id="pNameDicionario2">O nome Do dicionario</p>
+                                </button>
+                                <i class="fas fa-check-circle" id="statusSelecionado2"></i>
+                            </div>
+        
+                            <div  class="divLinkDicionario" >
+                                <button class="dicionarioIconGeral"  id="dicionarioIcon3" >
+                                    <i class="fas fa-spell-check"></i>
+                                    <p id="pNameDicionario3">O nome Do dicionario</p>
+                                </button>
+                                <i class="fas fa-check-circle" id="statusSelecionado3"></i>
+                            </div>
+        
+                            <div  class="divLinkDicionario" >
+                                <button class="dicionarioIconGeral"  id="dicionarioIcon4" >
+                                    <i class="fas fa-spell-check"></i>
+                                    <p id="pNameDicionario4">O nome Do dicionario</p>
+                                </button>
+                                <i class="fas fa-check-circle" id="statusSelecionado4"></i>
+                            </div>
+
+                            <button id="excluir">Excluir</button>
+                        </div>
+                    </div>
+
+                </section>
+                <section id="sectionAdiçao">
+                    <div id="adiciona"><a id="aAdiciona" href="./adicionarPalavra.html">Adicionar palavra</a></a></div>
+                </section>
+
+            </section>
+            </section>
+    </main>
+
+
+
+    <main id="MeusRegistros">
+        <section class="abas" id="abasRegistros">
+
+        </section>
+        <div id="InfRegistros">Meu Dicionário;</div>
+
+    <div id="divDicionariosLinkRegistros">
+
+        <p id="pMDicionariosRegistros">Meus dicionarios:</p>
+        <div  class="divLinkDicionarioRegistros" >
+            <button  class="dicionarioIconGeralRegistros" id="dicionarioIcon1Registros">
+                <i class="fas fa-spell-check"></i>
+                <p id="pNameDicionario1Registros">O nome Do dicionario</p>
+            </button>
+            <i class="fas fa-check-circle" id="statusSelecionado1Registros"></i>
+        </div>
+       
+        <div  class="divLinkDicionarioRegistros" >
+            <button class="dicionarioIconGeralRegistros"  id="dicionarioIcon2Registros" >
+                <i class="fas fa-spell-check"></i>
+                <p id="pNameDicionario2Registros">O nome Do dicionario</p>
+            </button>
+            <i class="fas fa-check-circle" id="statusSelecionado2Registros"></i>
+        </div>
+
+        <div  class="divLinkDicionarioRegistros" >
+            <button class="dicionarioIconGeralRegistros"  id="dicionarioIcon3Registros" >
+                <i class="fas fa-spell-check"></i>
+                <p id="pNameDicionario3Registros">O nome Do dicionario</p>
+            </button>
+            <i class="fas fa-check-circle" id="statusSelecionado3Registros"></i>
+        </div>
+
+        <div  class="divLinkDicionarioRegistros" id="divLink4" >
+            <button class="dicionarioIconGeralRegistros"  id="dicionarioIcon4Registros" >
+                <i class="fas fa-spell-check"></i>
+                <p id="pNameDicionario4Registros">O nome Do dicionario</p>
+            </button>
+            <i class="fas fa-check-circle" id="statusSelecionado4Registros"></i>
+        </div>
+    </div>
+    <div id="divPInf">
+        <p id="InfDadosDicionarioSelecionado">Dados Do Dicionario selecionado:</p>
+    </div>
+    <div id="divExcluirPalavra">
+        <button id="excluirPalavra">Excluir</button>
+    </div>
+    <button id="RetornoDadosDicionario">
+        <div id="divRetornoDadosDicionario">
+            <p id="retornoPalavra">Ganhar</p>
+            <p id="retornoSignifido">adquirir, auferir mediante trabalho, negócios ou atividades.</p>
+        </div>
+    </button>
+    </main>
+
+
+    <section id="Propaganda"> 
+        <div id="area2">
+            <a href="https://www.adobe.com/br/creativecloud/plans.html?sdid=GZKZY1B7&mv=display" target="blanck"><img id="img1" src="https://cdn.flashtalking.com/xre/420/4200429/2791071/image/2791071.gif?335089642" alt=""></a>
+        </div>
+        <div id="area1">
+            <a href="https://www.amazon.com.br/prime" target="blanck"><img id="img2" src="./Assets/imagens/amazon-prime-brindes-amostras-amostra-ganhe-gratuitamente-30-dias.png" alt=""></a>
+        </div>
+    
+        
+    </section>
+
+    <footer>
+        <a href="" id="idioma" class="footerText">Idioma:Portugues</a> 
+        <a href="" id="termos"  class="footerText">Termos De Uso</a>
+        <p id="copyright"  class="footerText">Copyright © 2020 NewWord. All rights reserved.</p>
+    </footer>
+
+    <script src="./Assets/js/script.js"></script>
+</body>
+</html

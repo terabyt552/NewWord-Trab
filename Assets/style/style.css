@@ -1,0 +1,841 @@
+@font-face {
+    font-family: 'quicksandMedium';
+    src: url('../fonts/static/Quicksand-Medium.ttf');
+}
+@font-face {
+    font-family: 'quicksandLight';
+    src: url('../fonts/static/Quicksand-Light.ttf');
+}
+@font-face {
+    font-family: 'quicksandRegular';
+    src: url('../fonts/static/Quicksand-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Staatliches';
+    src: url('../fonts/Staatliches/Staatliches-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'quicksandBold';
+    src: url('../fonts/static/Quicksand-Bold.ttf');
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+p {
+    margin:0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    display: none;
+   color:#002F5E;
+}
+
+header {
+    height: 7vh;
+    background-color:#0055AC;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #002F5E;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#sectionMenuLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family:quicksandLight;
+    text-decoration: none;
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    margin-left: 8px;
+    color:#AB6B00;
+}
+
+.titulo :hover {
+    color:#b87809;
+}
+
+
+.sectionPessoal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aHeader {
+    text-decoration: none;
+    margin: 0;
+    color:#AB6B00;
+}
+
+
+.aHeader :hover {
+    color:#5E3B00;
+}
+
+#aHeader {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.subTitulo {
+    font-family:quicksandBold;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+#sectionFerramentas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    text-decoration: none;
+    color:#AB6B00;
+    font-family:quicksandLight;
+    font-weight: 600;
+    padding: 2px;
+    border: 2px solid #AB6B00;
+    border-radius: 8px;
+}
+
+.login :hover {
+   padding: 3px;
+}
+
+.modoNoturno {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.divSuspensaModoNoturnoStatus {
+    display: none;
+    max-height: 0px;
+    background-color: #002F5E;
+    padding: 2px;
+    position: fixed;
+    top: 6vh;
+}
+
+.modoNoturno:hover .divSuspensaModoNoturnoStatus{
+    display: inline-block;  
+    max-height: 25px;
+    color: rgb(219, 219, 219);
+    border: 1px solid #001d3a;
+    border-radius: 5px; 
+}
+
+.fa-cloud-moon {
+    color:#AB6B00;  
+}
+
+.logoff {
+
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+
+
+.divlogoffInf {
+    display: none;
+    max-height: 0px;
+    background-color: #002F5E;
+    padding: 2px;
+    position: fixed;
+    top: 6vh;
+}
+
+.logoff:hover .divlogoffInf{
+    display: inline-block;  
+    max-height: 25px;
+    color: rgb(219, 219, 219);
+    border: 1px solid #001d3a;
+    border-radius: 5px; 
+}
+
+
+.fa-sign-in-alt {
+    color:#AB6B00;  
+}
+
+main {
+    float: left;
+    width: 80vw;
+    padding-left: 8px;
+    padding-right: 1vw;
+}
+
+#paginaPrincipal {
+    display: inline-block;
+}
+
+.abas {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 19vh;
+    border-bottom: 2px solid #1988F7;
+}
+
+.aba {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:quicksandRegular;
+    font-size: 19px;
+    height: 48px;
+}
+
+
+
+#adicionar {
+    margin-right: 22px;
+    margin-left: 22px;
+}
+
+#todosDicionarios :hover {
+    font-family:quicksandBold;
+}
+
+#adicionar :hover {
+    font-family:quicksandBold;
+   }
+   
+#encontrar :hover {
+    font-family:quicksandBold;
+}
+
+
+.aAba {
+    
+    color:#b17308;
+}
+
+#Inf {
+    float: right;
+    font-family:quicksandRegular;
+    color: rgb(17, 17, 17);
+}
+
+#dados {
+    display: flex;
+    flex-direction: column;
+    
+    height: 80vh;
+    width: 80vw;
+}
+
+#divVazio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 80vw;
+}
+
+#imgAbaVazia {
+    width: 30vw;
+    height: 30vh;
+}
+
+#infVazio {
+    font-family: quicksandBold;
+    font-size: 17px;
+    color: rgb(17, 17, 17);
+}
+
+#criar {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    padding:8px;
+    border: 1px solid #AB6B00;
+    border-radius: 8px;
+}
+
+#criar :hover {
+    font-family:quicksandBold;
+}
+
+#formAdiçaoDicionario {
+    width: 15vw;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.infForm {
+    font-family: quicksandBold;
+    font-size: 17px;
+    color: rgb(17, 17, 17);
+}
+
+#novoNome {
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+#sectionDados {
+    display: none;
+    justify-content: space-between;
+    align-items: flex-start;
+     border-top: 0.5px solid #1988F7;
+     width: 60vw;
+     margin-top: 20px;
+}
+
+
+#meusDicionarios {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 15px;
+}
+
+#pMDicionarios {
+    font-family: quicksandBold;
+    font-size: 17px;
+    color: rgb(17, 17, 17);
+}
+
+.divLinkDicionario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#statusSelecionado1 {
+    display: none;
+}
+
+#statusSelecionado2 {
+    display: none;
+}
+
+#statusSelecionado3 {
+    display: none;
+}
+
+#statusSelecionado4 {
+    display: none;
+}
+
+.dicionarioIconGeral {
+    width: 15vw;
+    padding:8px;
+    border: 1px solid #AB6B00;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    outline-color: #1988F7;
+}
+
+#dicionarioIcon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.fa-check-circle {
+    color: #1988F7;
+}
+
+#dicionarioIcon1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+#dicionarioIcon2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+#dicionarioIcon3 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.fa-spell-check {
+    padding: 2px;
+    border: 1px solid  rgb(17, 17, 17);
+    border-radius: 6px;
+    margin-right: 4px;
+}
+
+#divInput {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#inputNome {
+    background: #fff url('../imagens/folder-plus-solid.svg') no-repeat 1% center;
+    width: 13vw;
+    padding: 3px;
+    padding-left: 35px;
+    border: 1px solid #AB6B00;
+    border-radius: 3px;
+    outline-color:#1988F7;
+    outline-width: 1px;
+    font-family:quicksandRegular;
+    font-weight: 700;
+    color: rgb(17, 17, 17);
+}
+
+#pNome {
+    font-family: quicksandMedium;
+    color: rgb(17, 17, 17);
+}
+
+#pNameDicionario {
+    font-family:quicksandMedium;
+    font-size: 15px;
+    color:rgb(17, 17, 17);
+}
+
+.pFormAdiciona {
+    font-family:quicksandMedium;
+   font-size: 15px;
+   color: rgb(17, 17, 17);
+}
+
+#excluir {
+    display: none;
+    background-color: transparent;
+    border: 1px solid  #AB6B00;
+    border-radius: 3px;
+    padding: 3px;
+    outline-color:#1988F7;
+    outline-width: 1px;
+    margin-top: 5px;
+    font-family:quicksandMedium;
+    color:rgb(17, 17, 17);
+}
+
+#sectionAdiçao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    
+}
+
+#adiciona {
+    display: none;
+    background-color: transparent;
+    border: 1px solid  #AB6B00;
+    border-radius: 3px;
+    padding: 3px;
+    outline-color:#1988F7;
+    outline-width: 1px;
+    margin-left: 5px;
+}
+
+
+#aAdiciona {
+    font-family:quicksandRegular;
+    color:#b17308;
+}
+
+
+
+
+
+
+
+
+
+#MeusRegistros {
+    display: none;
+}
+
+#pMDicionariosRegistros {
+    font-family: quicksandBold;
+    font-size: 17px;
+    color: rgb(17, 17, 17);
+}
+
+#InfRegistros {
+    float: right;
+    font-family:quicksandRegular;
+    color: rgb(17, 17, 17);
+}
+
+#pMDicionariosRegistros {
+    font-family: quicksandBold;
+    font-size: 17px;
+    color: rgb(17, 17, 17);
+}
+
+#divDicionariosLinkRegistros {
+    border-bottom: 2px solid #1988F7;
+}
+
+.divLinkDicionarioRegistros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#divLink4 {
+    margin-bottom: 20px;
+}
+
+#statusSelecionado1Registros {
+    display: none;
+}
+
+#statusSelecionado2Registros {
+    display: none;
+}
+
+#statusSelecionado3Registros {
+    display: none;
+}
+
+#statusSelecionado4Registros {
+    display: none;
+}
+
+.dicionarioIconGeralRegistros {
+    width: 15vw;
+    padding:8px;
+    border: 1px solid #AB6B00;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    outline-color: #1988F7;
+}
+
+#dicionarioIconRegistros {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.fa-check-circle {
+    color: #1988F7;
+}
+
+#dicionarioIcon1Registros {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+#dicionarioIcon2Registros {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+#dicionarioIcon3Registros {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.fa-spell-check {
+    padding: 2px;
+    border: 1px solid  rgb(17, 17, 17);
+    border-radius: 6px;
+    margin-right: 4px;
+}
+
+#pNameDicionarioRegistros {
+    font-family:quicksandMedium;
+    font-size: 15px;
+    color:rgb(17, 17, 17);
+}
+
+#divPInf {
+    text-align: center;
+}
+
+#InfDadosDicionarioSelecionado {
+    font-family: quicksandBold;
+    font-size: 17px;
+    color: rgb(17, 17, 17);
+}
+
+#divExcluirPalavra {
+    width: 80vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+#excluirPalavra {
+    display: none;
+    background-color: transparent;
+    border: 1px solid  #AB6B00;
+    border-radius: 3px;
+    padding: 3px;
+    outline-color:#1988F7;
+    outline-width: 1px;
+    margin-left: 5px;
+}
+
+#retornoDadosDicionario {
+    width: 80vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#divRetornoDadosDicionario {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border: 2px solid #AB6B00;
+    border-radius: 10px;
+}
+
+#retornoPalavra {
+    padding: 5px;
+    width: 140px;
+    border-bottom: 2px solid #AB6B00;
+    font-family: quicksandBold;
+    color: rgb(32, 32, 32);
+}
+
+#retornoSignifido {
+    padding: 5px;
+    font-family: quicksandMedium;
+    color: rgb(32, 32, 32);
+}
+
+
+
+
+
+
+
+
+
+
+#propaganda {
+    width: 17vw;
+    height: 100vh;
+    float: right;
+}
+
+#img1  {
+    width: 17vw;
+    height: 40vh;
+}
+#img2 {
+    width: 17vw;
+    height: 60vh;
+}
+
+
+
+footer {
+    height: 5vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color:#0055AC;
+    border-top:1px solid #002F5E;
+    position: fixed;
+    top: 95vh;
+    left: 0;
+    right: 0;
+}
+
+.footerText {
+    font-family:quicksandMedium;
+    font-size: 15px;
+    color:#b17308;
+}
+
+#idioma {
+    margin-left: 8px;
+}
+
+#copyright {
+    margin-left: 22px;
+    margin-right: 22px;
+}
+
+#termos {
+    margin-left: 22px;
+}
+
+
+@media(max-width: 640px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .navbar {
+      display: flex;
+      color:#002F5E;
+      padding-left: 5px;
+      z-index: 1;
+    }
+
+    #bars {
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+
+    .sectionPessoal{
+        overflow: hidden;
+      max-width:0vw;
+        background-color: #001d3a;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: fixed;
+      top: 0vh;
+      transition: max-width  0.4s;
+      border-radius: 8px;
+    }
+
+     .show {
+        max-width:60vw;
+        width: 60vw;
+     }
+
+     #aHeader {
+         margin-left: 6vw;
+     }
+
+     .subTitulo {
+         font-size: 19px;
+     }
+
+    .aHeader {
+        padding: 15px;
+        margin-top: 3vh;
+        margin-left: 6vw;
+    }
+
+    #criar {
+        width: 40vw;
+    }
+
+    #divInput {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #inputNome {
+        width: 50vw;
+        margin-right: 3px;
+    }
+
+
+    .dicionarioIconGeral {
+        width: 40vw;
+    }
+
+    .dicionarioIconGeralRegistros {
+        width: 40vw;
+    }
+
+    #RetornoDadosDicionario {
+        margin-top: 20px;
+        margin-right: 5px;
+    }
+
+    
+    #propaganda {
+       width: 80vw;
+       height: 20vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+
+    #area1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #area2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #img1  {
+       width: 80vw;
+       height: 20vh;
+       margin-top: 20px;
+    }
+    #img2 {
+       width: 80vw;
+       height: 20vh;
+       margin-top: 20px;
+    }
+
+
+    footer {
+        height: 15vh;
+        position: relative;
+        top: 0vh;
+        width: 100vw;
+    }
+
+
+
+}
+
