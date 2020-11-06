@@ -13,6 +13,22 @@ Ja dadosdicionarios funciona um pouco diferente, as palavras podem ser adicionad
 
 
 
-A pagina está de facil entendimento, o codigo também.
+A pagina está de facil entendimento, o codigo também.São alguns arquivos:
+
+index.php: Pagina Principal com iterface;
+
+index2.php: Pagina secundaria com interface, que surgi depois de apertar o botao registros do index.php, é nela que aparece a lista de palavras do dicionario selecionado.
+
+adicionaPalavra.php: È o arquivo que tem como funçao receber uma requisiçao e fazer um envio ao servidor para adicionar uma palavra a um dicionario especifico.
+
+indexAdicionaPalavra.php:È uma pagina que tem interface, onde é mostrado somente uma tabela com nome e significado e um botao que vai chamar o arquivo adicionaPalavra.php e também um butao que volta para a pagina principal.
+
+TratamentoDicionario.php: È um arquivo que revebe um envio por formulario do arquivo index.php onde se tem um nome para um novo dicionario que vai ser adicionado apartir desse arquivo.
+
+excluirDicionario.php e excluirPalavra.php: quando um botao de excluir é clicado se estiver na area do index2.php ele chama o arquivo excluirPalavra.php, na area do index.php o botao chama excluirDicionario.php.
+
+listaPalavras.php: Este arquivo tem uma interface que é montada apartir de dados retornados do banco de dados(palavra e significado).
 
 Pode haver algumas funções na tela que nao funcionem por serem meramente ilustrativas já que o site não vai ter uso real;
+
+####No banco de dados os dicionarios tem uma data de adição que serve apenas para manter a organizaçao no server.
