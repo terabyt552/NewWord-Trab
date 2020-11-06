@@ -23,7 +23,7 @@ const pNameDicionario4 = document.querySelector('#pNameDicionario4');
 
 const excluir = document.querySelector('#excluir');
 const adiciona = document.querySelector('#adiciona');
-const aAdiciona = document.querySelector('#aAdiciona');
+
 const formAdiciona = document.querySelector('#formAdiciona');
 
 const aHeader = document.querySelector('#aHeader');
@@ -36,7 +36,8 @@ const sectionPessoal = document.querySelector(".sectionPessoal");
 const cloudMoon = document.querySelector('#cloudMoon');
 const divSuspensaModoNoturnoStatus = document.querySelector('.divSuspensaModoNoturnoStatus');
 
-var contagemEspaço = 1; //mais tarde os dados vao vir do servidor sem a necessidade de contagem so pelo texto contido nos pNameDicionario.
+var contagemEspaço = 1; 
+//mais tarde os dados vao vir do servidor sem a necessidade de contagem so pelo texto contido nos pNameDicionario.
 var controleSeleçao ="";
 
 var modoAtivo = 1;
@@ -68,47 +69,6 @@ if(screen.width <= 640) {
 }
 
 
-cloudMoon.onclick = function() {
-    if(modoAtivo == 1) {
-        divSuspensaModoNoturnoStatus.textContent = "desligar";
-        body.style.backgroundColor = "#1e1e1e";
-        document.querySelector('#Inf').style.color = "#e3e3e3";
-        document.querySelector('#InfRegistros').style.color = "#e3e3e3";
-        document.querySelector('#infVazio').style.color = "#e3e3e3";
-        document.querySelector('#pMDicionarios').style.color = "#e3e3e3";
-        document.querySelector('#pMDicionariosRegistros').style.color = "#e3e3e3";
-        document.querySelector('#InfDadosDicionarioSelecionado').style.color = "#e3e3e3";
-        document.querySelector('.infForm').style.color = "#e3e3e3";
-        document.querySelector('#novoNome').style.color = "#e3e3e3";
-        inputNomeDicionario.style.backgroundColor = "#e3e3e3";
-        inputNomeDicionario.style.color = "#e3e3e3"
-        excluirPalavra.style.color = "#e3e3e3";
-        document.querySelector('.abas').style.borderColor = "#e3e3e3";
-        document.querySelector('#abasRegistros').style.borderColor = "#e3e3e3";
-        document.querySelector('#sectionDados').style.borderColor = "#e3e3e3";
-        document.querySelector('#divDicionariosLinkRegistros').style.borderColor = "#e3e3e3";
-        modoAtivo = 2;
-        }else{
-        divSuspensaModoNoturnoStatus.textContent = "ligar";
-        document.querySelector('#Inf').style.color = "rgb(17, 17, 17)";
-        document.querySelector('#InfRegistros').style.color = "rgb(17, 17, 17)";
-        document.querySelector('#infVazio').style.color = "rgb(17, 17, 17)";
-        document.querySelector('#pMDicionarios').style.color = "rgb(17, 17, 17)";
-        document.querySelector('#pMDicionariosRegistros').style.color = "rgb(17, 17, 17)";
-        document.querySelector('#InfDadosDicionarioSelecionado').style.color = "rgb(17, 17, 17)";
-        document.querySelector('.infForm').style.color = "rgb(17, 17, 17)";
-        document.querySelector('#novoNome').style.color = "rgb(17, 17, 17)";
-        inputNomeDicionario.style.backgroundColor = "white";
-        excluirPalavra.style.color = "rgb(17, 17, 17)";
-        document.querySelector('.abas').style.borderColor = "#1988F7";
-        document.querySelector('#sectionDados').style.borderColor = "#1988F7";
-        document.querySelector('#divDicionariosLinkRegistros').style.borderColor = "#1988F7";
-        document.querySelector('#abasRegistros').style.borderColor = "#1988F7";
-        modoAtivo = 1;
-        body.style.backgroundColor = "white";
-    }
-}
-
 aHeader.onclick = function () {
      paginaPrincipal.style.display = "none";
      meusRegistros.style.display = "inline-block";
@@ -131,10 +91,9 @@ criar.onclick = function () {
 buttonAdiciona.onclick = function () {
     if(contagemEspaço <= 4 ) {
         if(pNameDicionario1.textContent == "O nome Do dicionario") {
-            pNameDicionario1.textContent = inputNomeDicionario.textContent;
+            pNameDicionario1.textContent = inputNomeDicionario.value;
             formAdiçaoDicionario.style.display = "none";
             criar.style.display = "flex";
-            divVazio.style.display = "none";
                //faz o envio para o servidor...
     contagemEspaço = contagemEspaço+1
         }else {
@@ -169,10 +128,12 @@ buttonAdiciona.onclick = function () {
 }
 
 dicionarioIcon1.onclick = function () {
-    if(pNameDicionario1.textContent != "O nome Do dicionario") {
+    if(pNameDicionario1.textContent != "Vazio") {
         controleSeleçao = pNameDicionario1.textContent;
         excluir.style.display = "inline-block";
+        document.querySelector('#excluir').value = 1;
         adiciona.style.display = "inline-block";
+        document.querySelector('#adiciona').value = 1;
         statusSelecionado1.style.display = "inline-block";
         statusSelecionado2.style.display = "none";
         statusSelecionado3.style.display = "none";
@@ -184,154 +145,87 @@ dicionarioIcon1.onclick = function () {
 }
 
 dicionarioIcon2.onclick = function () {
-    if(pNameDicionario2.textContent != "O nome Do dicionario") {
+    if(pNameDicionario2.textContent != "Vazio") {
         controleSeleçao = pNameDicionario2.textContent;
         excluir.style.display = "inline-block";
+        document.querySelector('#excluir').value = 2;
         adiciona.style.display = "inline-block";
+        document.querySelector('#adiciona').value = 2;
         statusSelecionado2.style.display = "inline-block";
         statusSelecionado1.style.display = "none";
         statusSelecionado3.style.display = "none";
         statusSelecionado4.style.display = "none";
     }else {
         excluir.style.display = "none";
+        adiciona.style.display = "none";
         alert("campo vazio");
     }
 }
 
 dicionarioIcon3.onclick = function () {
-    if(pNameDicionario3.textContent != "O nome Do dicionario") {
+    if(pNameDicionario3.textContent != "Vazio") {
         controleSeleçao =pNameDicionario3.textContent ;
         excluir.style.display = "inline-block";
+        document.querySelector('#excluir').value = 3;
         adiciona.style.display = "inline-block";
+        document.querySelector('#adiciona').value = 3;
         statusSelecionado3.style.display = "inline-block";
         statusSelecionado2.style.display = "none";
         statusSelecionado1.style.display = "none";
         statusSelecionado4.style.display = "none";
     }else {
         excluir.style.display = "none";
+        adiciona.style.display = "none";
         alert("campo vazio");
     }
 }
 
 dicionarioIcon4.onclick = function () {
-    if(pNameDicionario4.textContent != "O nome Do dicionario") {
+    if(pNameDicionario4.textContent != "Vazio") {
     controleSeleçao =pNameDicionario4.textContent;
     excluir.style.display = "inline-block";
+    document.querySelector('#excluir').value = 4;
     adiciona.style.display = "inline-block";
+    document.querySelector('#adiciona').value = 4;
     statusSelecionado4.style.display = "inline-block";
     statusSelecionado2.style.display = "none";
     statusSelecionado3.style.display = "none";
     statusSelecionado1.style.display = "none";
     }else {
         excluir.style.display = "none";
+        adiciona.style.display = "none";
         alert("campo vazio");
     }
 }
 
-
-aAdiciona.onclick = function () {
-    adiciona.style.display = "none";
-    formAdiciona.style.display = "flex";
-}
-
-
 excluir.onclick = function () {
     if(pNameDicionario1.textContent == controleSeleçao) {
-        pNameDicionario1.textContent = "O nome Do dicionario";
+      
         adiciona.style.display = "none";
         excluir.style.display = "none";
         statusSelecionado1.style.display = "none";
     }
 
     if(pNameDicionario2.textContent == controleSeleçao) {
-        pNameDicionario2.textContent = "O nome Do dicionario";
+     
         adiciona.style.display = "none";
         excluir.style.display = "none";
         statusSelecionado2.style.display = "none";
     }
 
     if(pNameDicionario3.textContent == controleSeleçao) {
-        pNameDicionario3.textContent = "O nome Do dicionario";
+
         adiciona.style.display = "none";
         excluir.style.display = "none";
         statusSelecionado3.style.display = "none";
     }
 
     if(pNameDicionario4.textContent == controleSeleçao) {
-        pNameDicionario4.textContent = "O nome Do dicionario";
+
         adiciona.style.display = "none";
         excluir.style.display = "none";
         statusSelecionado4.style.display = "none";
     }
-}
-
-//Apartir daqui, está o codigo da aba de Registros:
-
-
-const dicionarioIcon1Registros = document.querySelector('#dicionarioIcon1Registros');
-const dicionarioIcon2Registros = document.querySelector('#dicionarioIcon2Registros');
-const dicionarioIcon3Registros = document.querySelector('#dicionarioIcon3Registros');
-const dicionarioIcon4Registros = document.querySelector('#dicionarioIcon4Registros');
-
-
-const pNameDicionario1Registros = document.querySelector('#pNameDicionario1Registros');
-const pNameDicionario2Registros = document.querySelector('#pNameDicionario2Registros');
-const pNameDicionario3Registros = document.querySelector('#pNameDicionario3Registros');
-const pNameDicionario4Registros = document.querySelector('#pNameDicionario4Registros');
-
-const RetornoDadosDicionario = document.querySelector('#RetornoDadosDicionario');
-const excluirPalavra = document.querySelector('#excluirPalavra');
-
-dicionarioIcon1Registros.onclick = function () {
-    if(pNameDicionario1Registros.textContent != "O nome Do dicionario") {
-        controleSeleçao = pNameDicionario1Registros.textContent;
-        statusSelecionado1Registros.style.display = "inline-block";
-        statusSelecionado2Registros.style.display = "none";
-        statusSelecionado3Registros.style.display = "none";
-        statusSelecionado4Registros.style.display = "none";
-    }else {
-        alert("campo vazio");
-    }
-}
-
-dicionarioIcon2Registros.onclick = function () {
-    if(pNameDicionario2Registros.textContent != "O nome Do dicionario") {
-        controleSeleçao = pNameDicionario2Registros.textContent;
-        statusSelecionado2Registros.style.display = "inline-block";
-        statusSelecionado1Registros.style.display = "none";
-        statusSelecionado3Registros.style.display = "none";
-        statusSelecionadoRegistros4.style.display = "none";
-    }else {
-        alert("campo vazio");
-    }
-}
-
-dicionarioIcon3Registros.onclick = function () {
-    if(pNameDicionario3Registros.textContent != "O nome Do dicionario") {
-        controleSeleçao =pNameDicionario3Registros.textContent ;
-        statusSelecionado3Registros.style.display = "inline-block";
-        statusSelecionado2Registros.style.display = "none";
-        statusSelecionado1Registros.style.display = "none";
-        statusSelecionado4Registros.style.display = "none";
-    }else {
-        alert("campo vazio");
-    }
-}
-
-dicionarioIcon4Registros.onclick = function () {
-    if(pNameDicionario4Registros.textContent != "O nome Do dicionario") {
-    controleSeleçao =pNameDicionario4.textContent;
-    statusSelecionado4Registros.style.display = "inline-block";
-    statusSelecionado2Registros.style.display = "none";
-    statusSelecionado3Registros.style.display = "none";
-    statusSelecionado1Registros.style.display = "none";
-    }else {
-        alert("campo vazio");
-    }
-}
-
-RetornoDadosDicionario.onclick = function () {
-    excluirPalavra.style.display = "inline-block"
 }
 
 

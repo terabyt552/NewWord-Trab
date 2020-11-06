@@ -15,12 +15,12 @@
                <button id="bars"><i class="fas fa-bars"></i></button> 
             </div>
             <div>
-                <a class="titulo" href="./index.html "a><p>NewWord</p></a>
+                <a class="titulo" href="./index.php "a><p>NewWord</p></a>
             </div>
         </section>
         <nav class="sectionPessoal">
             <a class="aHeader"><p class="subTitulo" id="pPerf">Meu perfil</p></a>
-            <a class="aHeader"id="aHeader"><p class="subTitulo" id="pReg">Meus Registros</p></a>
+            <a class="aHeader"id="aHeader" href="./index2.php"><p class="subTitulo" id="pReg">Meus Registros</p></a>
             <a  class="aHeader"><p class="subTitulo">Referencia</p></a>
         </nav>
         <section id="sectionFerramentas">
@@ -54,12 +54,26 @@
                 <p class="infForm">Criar Novo Dicionário:</p>
                 <p id="novoNome" class="infForm">Nome</p>
                 <div id="divInput">
-                    <form action="" method="">
-                    <input type="text" required id="inputNome" >
-                    <button  id="ExecutaCriaçao" ><p id="pNome">Criar</p></button>
+                    <form action="./TratamentoDicionario.php" method="GET">
+                    <input type="text" name="Nome" required id="inputNome" >
+                    <button type="submit" id="ExecutaCriaçao" ><p id="pNome">Criar</p></button>
                     </form>
                 </div>
             </div>
+
+            <?php 
+               try {
+                $atvBanco = new PDO("mysql:host=127.0.0.1;dbname=newword-model", "root", "password");
+                $atvBanco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $atvBanco->exec('set names utf8');
+                $requisiçaoLista = $atvBanco->prepare("SELECT * FROM dicionario");
+                $requisiçaoLista->execute();
+                $listaDicionario = $requisiçaoLista-> fetchAll(PDO::FETCH_OBJ);
+
+            } catch (PDOException $error) {
+              die('Erro de comunicaçao com servidor:' . $error->getMessage());
+            }    
+            ?>
         
             <section id="sectionDados">
                 <section id="sectionMeusDicionarios">
@@ -70,7 +84,7 @@
                             <div  class="divLinkDicionario" >
                                 <button  class="dicionarioIconGeral" id="dicionarioIcon1">
                                     <i class="fas fa-spell-check"></i>
-                                    <p id="pNameDicionario1">Dicionario1</p>
+                                    <p id="pNameDicionario1"><?php echo"{$listaDicionario[0]->Nome}"?></p>
                                 </button>
                                 <i class="fas fa-check-circle" id="statusSelecionado1"></i>
                             </div>
@@ -78,7 +92,7 @@
                             <div  class="divLinkDicionario" >
                                 <button class="dicionarioIconGeral"  id="dicionarioIcon2" >
                                     <i class="fas fa-spell-check"></i>
-                                    <p id="pNameDicionario2">O nome Do dicionario</p>
+                                    <p id="pNameDicionario2"><?php echo"{$listaDicionario[1]->Nome}"?></p>
                                 </button>
                                 <i class="fas fa-check-circle" id="statusSelecionado2"></i>
                             </div>
@@ -86,7 +100,7 @@
                             <div  class="divLinkDicionario" >
                                 <button class="dicionarioIconGeral"  id="dicionarioIcon3" >
                                     <i class="fas fa-spell-check"></i>
-                                    <p id="pNameDicionario3">O nome Do dicionario</p>
+                                    <p id="pNameDicionario3"><?php echo"{$listaDicionario[2]->Nome}"?></p>
                                 </button>
                                 <i class="fas fa-check-circle" id="statusSelecionado3"></i>
                             </div>
@@ -94,81 +108,28 @@
                             <div  class="divLinkDicionario" >
                                 <button class="dicionarioIconGeral"  id="dicionarioIcon4" >
                                     <i class="fas fa-spell-check"></i>
-                                    <p id="pNameDicionario4">O nome Do dicionario</p>
+                                    <p id="pNameDicionario4"><?php echo"{$listaDicionario[3]->Nome}"?></p>
                                 </button>
                                 <i class="fas fa-check-circle" id="statusSelecionado4"></i>
                             </div>
-
-                            <button id="excluir">Excluir</button>
+                            <form action="./excluirDicionario.php" method="GET">
+                                <button type="submit" id="excluir" name="excluir" value= 0>Excluir</button>
+                            </form>
+                            
                         </div>
                     </div>
 
                 </section>
                 <section id="sectionAdiçao">
-                    <div id="adiciona"><a id="aAdiciona" href="./adicionarPalavra.html">Adicionar palavra</a></a></div>
+                    <form action="./indexAdicionarPalavra.php" method="POST">
+                       <button name="adiciona" id="adiciona" value= 0>Adicionar palavra</button> 
+                    </form>
+                    
                 </section>
 
             </section>
             </section>
     </main>
-
-
-
-    <main id="MeusRegistros">
-        <section class="abas" id="abasRegistros">
-
-        </section>
-        <div id="InfRegistros">Meu Dicionário;</div>
-
-    <div id="divDicionariosLinkRegistros">
-
-        <p id="pMDicionariosRegistros">Meus dicionarios:</p>
-        <div  class="divLinkDicionarioRegistros" >
-            <button  class="dicionarioIconGeralRegistros" id="dicionarioIcon1Registros">
-                <i class="fas fa-spell-check"></i>
-                <p id="pNameDicionario1Registros">O nome Do dicionario</p>
-            </button>
-            <i class="fas fa-check-circle" id="statusSelecionado1Registros"></i>
-        </div>
-       
-        <div  class="divLinkDicionarioRegistros" >
-            <button class="dicionarioIconGeralRegistros"  id="dicionarioIcon2Registros" >
-                <i class="fas fa-spell-check"></i>
-                <p id="pNameDicionario2Registros">O nome Do dicionario</p>
-            </button>
-            <i class="fas fa-check-circle" id="statusSelecionado2Registros"></i>
-        </div>
-
-        <div  class="divLinkDicionarioRegistros" >
-            <button class="dicionarioIconGeralRegistros"  id="dicionarioIcon3Registros" >
-                <i class="fas fa-spell-check"></i>
-                <p id="pNameDicionario3Registros">O nome Do dicionario</p>
-            </button>
-            <i class="fas fa-check-circle" id="statusSelecionado3Registros"></i>
-        </div>
-
-        <div  class="divLinkDicionarioRegistros" id="divLink4" >
-            <button class="dicionarioIconGeralRegistros"  id="dicionarioIcon4Registros" >
-                <i class="fas fa-spell-check"></i>
-                <p id="pNameDicionario4Registros">O nome Do dicionario</p>
-            </button>
-            <i class="fas fa-check-circle" id="statusSelecionado4Registros"></i>
-        </div>
-    </div>
-    <div id="divPInf">
-        <p id="InfDadosDicionarioSelecionado">Dados Do Dicionario selecionado:</p>
-    </div>
-    <div id="divExcluirPalavra">
-        <button id="excluirPalavra">Excluir</button>
-    </div>
-    <button id="RetornoDadosDicionario">
-        <div id="divRetornoDadosDicionario">
-            <p id="retornoPalavra">Ganhar</p>
-            <p id="retornoSignifido">adquirir, auferir mediante trabalho, negócios ou atividades.</p>
-        </div>
-    </button>
-    </main>
-
 
     <section id="Propaganda"> 
         <div id="area2">
@@ -189,4 +150,4 @@
 
     <script src="./Assets/js/script.js"></script>
 </body>
-</html
+</html>

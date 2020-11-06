@@ -12,18 +12,21 @@
 </body>
 </html>
 
+
+
 <body>
-    <form action="" method="" id="formAdiciona">
+    <form action="./adicionaPalavra.php" method="GET" id="formAdiciona">
         <div id="divAFechar">
-            <a href="./index.html"><i class="fas fa-times-circle"  id="buttonCancelaAdicionaPalavra"></i></a>
+            <a href="./index.php
+            "><i class="fas fa-times-circle"  id="buttonCancelaAdicionaPalavra"></i></a>
         </div>
         <div id="insereDados">
             <p id="pInf">Informe Dados:</p>
             <p class="pFormAdiciona">Palavra</p>
-        <input required id="inputPalavra">
+        <input required id="inputPalavra" name="palavra">
         <p class="pFormAdiciona" id="pFormAdicionaId">significado</p>
-        <textarea cols="50" rows="10"  wrap="hard" required maxlength="500" id="inputDescricao"></textarea>
+        <textarea cols="50" rows="10"  wrap="hard" required maxlength="500" id="inputDescricao" name="significado"></textarea>
         </div>
-        <button id="enviaPalavra">Registrar</button>
+        <button id="enviaPalavra" name="idDicionarioButtonRegistra" value= <?php echo "{$_POST['adiciona']}";?>>Registrar</button>
     </form>
 </body>
